@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement Calculator</title>
+</head>
+<body>
+    <input id = "converter" type="text"/>
+    <button onclick= 'toinches()'> Convert to Inches</button>
+    <button onclick='tocm()'>Convert to Cm</button>
+
+    <script>
+        function toinches(){
+            let textbox = document.getElementById('converter');
+            let title= textbox.value;
+            title =  title * 2.54;
+            let element = document.createElement('div');
+            element.innerText = title + ' ' + 'inches';
+            document.body.appendChild(element);
+        }
+
+        function tocm(){
+            let textbox = document.getElementById('converter')
+            let title= textbox.value;
+            title = title / 2.54
+            let element = document.createElement('div');
+            element.innerText = title +" "+'cm';
+            document.body.appendChild(element)
+        }
+        
+    </script>
+</body>
+</html>
